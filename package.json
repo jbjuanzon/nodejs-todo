@@ -1,0 +1,30 @@
+{
+  "name": "it114p-practical",
+  "version": "1.0.0",
+  "description": "practical exam",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbjuanzon/nodejs-todo.git"
+  },
+  "author": "John Benedict Juanzon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbjuanzon/nodejs-todo/issues"
+  },
+  "homepage": "https://github.com/jbjuanzon/nodejs-todo#readme",
+  "dependencies": {
+    "@mdi/font": "^4.2.95",
+    "bulma": "^0.7.5",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
