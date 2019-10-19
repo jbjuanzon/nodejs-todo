@@ -1,0 +1,26 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div>
+                <form class="list-form" action="/list/update/<%=todo.id%>" method="POST">
+                    <input hidden value="<%=todo.id%>" name="id">
+                    <div class="field">
+                        <label class="label">Task Name</label>
+                        <div class="control">
+                            <input class="input" type="text" value="<%=todo.toDo%>" name="title">
+                        </div>
+                        <button class="button is-info is-small is is-outlined" type="submit">
+                            Update
+                        </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

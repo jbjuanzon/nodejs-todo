@@ -14,12 +14,13 @@ module.exports = class List {
         );
     }
 
+    update() {
+        return db.execute('UPDATE list SET toDo = ? WHERE ID = ?',
+          [this.message, this.id, ]);
+      }
+
     static deleteById(id) {
-        var sql = `DELETE FROM todos WHERE id = ?`;
-        con.query(sql, function (err, result) {
-            if (err) throw err;
-            console.log("Number of records deleted: " + result.affectedRows);
-          });
+        return db.execute('DELETE FROM list WHERE id = ?', [id]);
     }
 
     static fetchAll() {
@@ -27,6 +28,6 @@ module.exports = class List {
     }
 
     static findById(id) {
-        return db.execute('SELECT * FROM list WHERE list.id = ?', [id]);
+        return db.execute('SELECT * FROM list WHERE id = ?', [id]);
     }
 }
